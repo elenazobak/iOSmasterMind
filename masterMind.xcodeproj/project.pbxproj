@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50D78645B49384557B9363BC /* Pods_masterMind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8547D5C6D9D985D53C48D37C /* Pods_masterMind.framework */; };
 		F3216D9A29D221670041DF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216D9929D221670041DF71 /* AppDelegate.swift */; };
 		F3216D9C29D221670041DF71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216D9B29D221670041DF71 /* SceneDelegate.swift */; };
 		F3216D9E29D221670041DF71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216D9D29D221670041DF71 /* ViewController.swift */; };
@@ -14,9 +15,18 @@
 		F3216DA429D221670041DF71 /* masterMind.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3216DA229D221670041DF71 /* masterMind.xcdatamodeld */; };
 		F3216DA629D221680041DF71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3216DA529D221680041DF71 /* Assets.xcassets */; };
 		F3216DA929D221680041DF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3216DA729D221680041DF71 /* LaunchScreen.storyboard */; };
+		F3216DB129D31EDE0041DF71 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DB029D31EDE0041DF71 /* GameViewController.swift */; };
+		F3216DB729D352260041DF71 /* CodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DB629D352260041DF71 /* CodeManager.swift */; };
+		F3216DBB29D3544E0041DF71 /* CodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DBA29D3544E0041DF71 /* CodeModel.swift */; };
+		F3216DC029D62C200041DF71 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DBF29D62C200041DF71 /* GameLogic.swift */; };
+		F3216DC229D72A340041DF71 /* InputHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DC129D72A340041DF71 /* InputHistory.swift */; };
+		F3216DC429D732DF0041DF71 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DC329D732DF0041DF71 /* History.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		281A18AA442CBB7943E5C473 /* Pods-masterMind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-masterMind.debug.xcconfig"; path = "Target Support Files/Pods-masterMind/Pods-masterMind.debug.xcconfig"; sourceTree = "<group>"; };
+		8547D5C6D9D985D53C48D37C /* Pods_masterMind.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_masterMind.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD4F1D37ACCB7C00E68C4CDD /* Pods-masterMind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-masterMind.release.xcconfig"; path = "Target Support Files/Pods-masterMind/Pods-masterMind.release.xcconfig"; sourceTree = "<group>"; };
 		F3216D9629D221670041DF71 /* masterMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = masterMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3216D9929D221670041DF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3216D9B29D221670041DF71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +36,12 @@
 		F3216DA529D221680041DF71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3216DA829D221680041DF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3216DAA29D221680041DF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3216DB029D31EDE0041DF71 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F3216DB629D352260041DF71 /* CodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeManager.swift; sourceTree = "<group>"; };
+		F3216DBA29D3544E0041DF71 /* CodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeModel.swift; sourceTree = "<group>"; };
+		F3216DBF29D62C200041DF71 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
+		F3216DC129D72A340041DF71 /* InputHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputHistory.swift; sourceTree = "<group>"; };
+		F3216DC329D732DF0041DF71 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50D78645B49384557B9363BC /* Pods_masterMind.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B0AB2DD50551C79BC6681C3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8547D5C6D9D985D53C48D37C /* Pods_masterMind.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2416655441315BCED8B877D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				281A18AA442CBB7943E5C473 /* Pods-masterMind.debug.xcconfig */,
+				AD4F1D37ACCB7C00E68C4CDD /* Pods-masterMind.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F3216D8D29D221660041DF71 = {
 			isa = PBXGroup;
 			children = (
 				F3216D9829D221670041DF71 /* masterMind */,
 				F3216D9729D221670041DF71 /* Products */,
+				D2416655441315BCED8B877D /* Pods */,
+				B0AB2DD50551C79BC6681C3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,15 +95,45 @@
 			isa = PBXGroup;
 			children = (
 				F3216D9929D221670041DF71 /* AppDelegate.swift */,
+				F3216DBC29D354640041DF71 /* Model */,
+				F3216DBE29D36EED0041DF71 /* Controllers */,
+				F3216DBD29D36ED40041DF71 /* View */,
 				F3216D9B29D221670041DF71 /* SceneDelegate.swift */,
-				F3216D9D29D221670041DF71 /* ViewController.swift */,
-				F3216D9F29D221670041DF71 /* Main.storyboard */,
 				F3216DA529D221680041DF71 /* Assets.xcassets */,
 				F3216DA729D221680041DF71 /* LaunchScreen.storyboard */,
 				F3216DAA29D221680041DF71 /* Info.plist */,
 				F3216DA229D221670041DF71 /* masterMind.xcdatamodeld */,
 			);
 			path = masterMind;
+			sourceTree = "<group>";
+		};
+		F3216DBC29D354640041DF71 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3216DB629D352260041DF71 /* CodeManager.swift */,
+				F3216DBA29D3544E0041DF71 /* CodeModel.swift */,
+				F3216DBF29D62C200041DF71 /* GameLogic.swift */,
+				F3216DC129D72A340041DF71 /* InputHistory.swift */,
+				F3216DC329D732DF0041DF71 /* History.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3216DBD29D36ED40041DF71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3216D9F29D221670041DF71 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3216DBE29D36EED0041DF71 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F3216DB029D31EDE0041DF71 /* GameViewController.swift */,
+				F3216D9D29D221670041DF71 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3216DAD29D221680041DF71 /* Build configuration list for PBXNativeTarget "masterMind" */;
 			buildPhases = (
+				E2D5445FBB0508974D94F240 /* [CP] Check Pods Manifest.lock */,
 				F3216D9229D221670041DF71 /* Sources */,
 				F3216D9329D221670041DF71 /* Frameworks */,
 				F3216D9429D221670041DF71 /* Resources */,
+				4BBCBB0651EDE691B23FC165 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,14 +204,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4BBCBB0651EDE691B23FC165 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-masterMind/Pods-masterMind-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-masterMind/Pods-masterMind-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-masterMind/Pods-masterMind-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2D5445FBB0508974D94F240 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-masterMind-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F3216D9229D221670041DF71 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3216DC029D62C200041DF71 /* GameLogic.swift in Sources */,
+				F3216DC229D72A340041DF71 /* InputHistory.swift in Sources */,
+				F3216DB129D31EDE0041DF71 /* GameViewController.swift in Sources */,
 				F3216D9E29D221670041DF71 /* ViewController.swift in Sources */,
+				F3216DC429D732DF0041DF71 /* History.swift in Sources */,
 				F3216D9A29D221670041DF71 /* AppDelegate.swift in Sources */,
 				F3216D9C29D221670041DF71 /* SceneDelegate.swift in Sources */,
+				F3216DB729D352260041DF71 /* CodeManager.swift in Sources */,
+				F3216DBB29D3544E0041DF71 /* CodeModel.swift in Sources */,
 				F3216DA429D221670041DF71 /* masterMind.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +402,7 @@
 		};
 		F3216DAE29D221680041DF71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 281A18AA442CBB7943E5C473 /* Pods-masterMind.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +431,7 @@
 		};
 		F3216DAF29D221680041DF71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD4F1D37ACCB7C00E68C4CDD /* Pods-masterMind.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
