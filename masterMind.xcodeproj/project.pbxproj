@@ -19,8 +19,10 @@
 		F3216DB729D352260041DF71 /* CodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DB629D352260041DF71 /* CodeManager.swift */; };
 		F3216DBB29D3544E0041DF71 /* CodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DBA29D3544E0041DF71 /* CodeModel.swift */; };
 		F3216DC029D62C200041DF71 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DBF29D62C200041DF71 /* GameLogic.swift */; };
-		F3216DC229D72A340041DF71 /* InputHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DC129D72A340041DF71 /* InputHistory.swift */; };
+		F3216DC229D72A340041DF71 /* InputHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DC129D72A340041DF71 /* InputHistoryModel.swift */; };
 		F3216DC429D732DF0041DF71 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DC329D732DF0041DF71 /* History.swift */; };
+		F3F4215129DB627F0000C8E3 /* HistoryTableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F4214F29DB627F0000C8E3 /* HistoryTableViewCell1.swift */; };
+		F3F4215229DB627F0000C8E3 /* HistoryTableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3F4215029DB627F0000C8E3 /* HistoryTableViewCell1.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +42,10 @@
 		F3216DB629D352260041DF71 /* CodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeManager.swift; sourceTree = "<group>"; };
 		F3216DBA29D3544E0041DF71 /* CodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeModel.swift; sourceTree = "<group>"; };
 		F3216DBF29D62C200041DF71 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
-		F3216DC129D72A340041DF71 /* InputHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputHistory.swift; sourceTree = "<group>"; };
+		F3216DC129D72A340041DF71 /* InputHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputHistoryModel.swift; sourceTree = "<group>"; };
 		F3216DC329D732DF0041DF71 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		F3F4214F29DB627F0000C8E3 /* HistoryTableViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell1.swift; sourceTree = "<group>"; };
+		F3F4215029DB627F0000C8E3 /* HistoryTableViewCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell1.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +117,7 @@
 				F3216DB629D352260041DF71 /* CodeManager.swift */,
 				F3216DBA29D3544E0041DF71 /* CodeModel.swift */,
 				F3216DBF29D62C200041DF71 /* GameLogic.swift */,
-				F3216DC129D72A340041DF71 /* InputHistory.swift */,
+				F3216DC129D72A340041DF71 /* InputHistoryModel.swift */,
 				F3216DC329D732DF0041DF71 /* History.swift */,
 			);
 			path = Model;
@@ -123,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				F3216D9F29D221670041DF71 /* Main.storyboard */,
+				F3F4214F29DB627F0000C8E3 /* HistoryTableViewCell1.swift */,
+				F3F4215029DB627F0000C8E3 /* HistoryTableViewCell1.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F4215229DB627F0000C8E3 /* HistoryTableViewCell1.xib in Resources */,
 				F3216DA929D221680041DF71 /* LaunchScreen.storyboard in Resources */,
 				F3216DA629D221680041DF71 /* Assets.xcassets in Resources */,
 				F3216DA129D221670041DF71 /* Main.storyboard in Resources */,
@@ -252,7 +259,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3216DC029D62C200041DF71 /* GameLogic.swift in Sources */,
-				F3216DC229D72A340041DF71 /* InputHistory.swift in Sources */,
+				F3F4215129DB627F0000C8E3 /* HistoryTableViewCell1.swift in Sources */,
+				F3216DC229D72A340041DF71 /* InputHistoryModel.swift in Sources */,
 				F3216DB129D31EDE0041DF71 /* GameViewController.swift in Sources */,
 				F3216D9E29D221670041DF71 /* ViewController.swift in Sources */,
 				F3216DC429D732DF0041DF71 /* History.swift in Sources */,

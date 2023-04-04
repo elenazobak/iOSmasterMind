@@ -7,12 +7,14 @@
 
 import Foundation
 
-class InputHistory {
+class InputHistoryModel {
     var userInput: String
-    var result: (Int, Int)
+    var numAndLocation: Int
+    var onlyNum: Int
     
     init(userInput: String, result: (Int, Int)) {
         self.userInput = userInput
-        self.result = result
+        self.numAndLocation = result.0
+        self.onlyNum = result.1
     }
 }
