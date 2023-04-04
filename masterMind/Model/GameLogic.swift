@@ -16,7 +16,7 @@ class GameLogic {
         var tempUserInput = userInputCode
         // Initialize the counts to 0
         var numAndLocation = 0
-        var correctNum = 0
+        var onlyNum = 0
         
         // Check for well-positioned digits
         for i in code.indices {
@@ -38,7 +38,7 @@ class GameLogic {
         for j in userInputCode.indices {
             // If the digit is in the dictionary, increment the count of correct digits
             if let count = numberObj[userInputCode[j]] {
-                correctNum += 1
+                onlyNum += 1
                 // If there is only one occurrence, remove the key-value pair from the dictionary
                 if count == 1 {
                     numberObj[userInputCode[j]] = nil
@@ -50,7 +50,7 @@ class GameLogic {
         }
         
         // Return a tuple with the values of numAndLocation and correctNum
-        return (numAndLocation, correctNum)
+        return (numAndLocation, onlyNum)
     }
     
     

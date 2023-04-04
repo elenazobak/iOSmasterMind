@@ -13,9 +13,11 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var codeNumLabel: UILabel! // Delete in the future
     
-    @IBOutlet weak var historyStackView: UIStackView!
+    @IBOutlet weak var historyTableView: UITableView!
+   
+    
     // Array to store the user's input history
-    var inputHistoryArray: [InputHistory] = [] //var history: [InputHistory] = []
+    var inputHistoryArray: [InputHistoryModel] = [] //var history: [InputHistory] = []
    
     
     var code: String?
@@ -47,12 +49,27 @@ class GameViewController: UIViewController {
         codeManager.delegate = self
         codeManager.fetchWeather(codeLength: codeLenght! )
         
+        let nib = UINib(nibName: "HistoryTableViewCell1", bundle: nil)
+        historyTableView.register(nib, forCellReuseIdentifier: "HistoryTableViewCell1")
+        
+        historyTableView.dataSource = self
+        
         
     }
     
     // MARK: - Button Actions
     
     @objc func submitButtonTapped() {
+        
+        
+        
+        if inputHistoryArray.count >= Int(attempts!)! - 1 {
+           print("game over")
+         
+            
+            
+        }
+        
         
         // Reset userInputCode to an empty string
         userInputCode = ""
@@ -75,52 +92,26 @@ class GameViewController: UIViewController {
         
         
         // Create a new input history object and add it to the array
-        let inputHistoryItem = InputHistory(userInput: userInputCode, result: result)
+        let inputHistoryItem = InputHistoryModel(userInput: userInputCode, result: result)
         
         print("inputHistoryItem.u:  \(inputHistoryItem.userInput)")
-        print("inputHistoryItem.r:  \(inputHistoryItem.result)")
+       
         inputHistoryArray.append(inputHistoryItem)
+        
+        historyTableView.reloadData()
         
         //print(inputHistoryArray[0].userInput)
         
         for inputHistoryItem in inputHistoryArray {
-            print("from inputHistoryArray - User input: \(inputHistoryItem.userInput), Result: \(inputHistoryItem.result)")
+            print("from inputHistoryArray - User input: \(inputHistoryItem.userInput), numAndLoc: \(inputHistoryItem.numAndLocation)")
         }
         
         // Clear the user's input
         userInputCode = ""
-        addHistoryLabelsToStackView()
+        //addHistoryLabelsToStackView()
     }
     
-    func addHistoryLabelsToStackView() {
-        guard nextLabelIndex < inputHistoryArray.count else {
-               // If we've already added all the labels, we can stop adding new ones
-               return
-           }
-           
-        // Get the label at the next index
-        let historyLabel = UILabel(frame: CGRect(x: 30, y: 30, width: 10, height: 2))
-        historyLabel.text = "\(nextLabelIndex):   \(inputHistoryArray[nextLabelIndex].userInput)         RIGHT loc:\(inputHistoryArray[nextLabelIndex].result.0) ,    WRONG loc:\(inputHistoryArray[nextLabelIndex].result.0)"
-        
-        
-        
-        // Create a new stack view with the label as its only arranged subview
-           let newStackView = UIStackView(arrangedSubviews: [historyLabel])
-        
-           
-        
-           
-           // Add the new stack view to the existing stack view
-        
-        historyStackView.addArrangedSubview(newStackView)
-           
-           // Update the index variable for the next time this function is called
-           nextLabelIndex += 1
-        
-   
-        
-       
-    }
+    
     
     
     
@@ -199,4 +190,23 @@ extension GameViewController: CodeManagerDelegate { // all the code functions
         print(error)
     }
 }
+
+//MARK: - history Table View
+
+extension GameViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return inputHistoryArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryTableViewCell1", for: indexPath)
+        let inputHistoryItem = inputHistoryArray[indexPath.row]
+        cell.textLabel?.text = "\(inputHistoryItem.userInput) \(inputHistoryItem.numAndLocation)"
+        return cell
+    }
+    
+}
+
+
 
