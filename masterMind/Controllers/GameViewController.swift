@@ -6,6 +6,8 @@
 //
 import UIKit
 import OTPFieldView
+//import AlertPopUp
+
 
 class GameViewController: UIViewController {
     
@@ -14,11 +16,11 @@ class GameViewController: UIViewController {
     @IBOutlet weak var codeNumLabel: UILabel! // Delete in the future
     
     @IBOutlet weak var historyTableView: UITableView!
-   
+    
     
     // Array to store the user's input history
     var inputHistoryArray: [InputHistoryModel] = [] //var history: [InputHistory] = []
-   
+    
     
     var code: String?
     var codeLenght: Int?
@@ -34,16 +36,11 @@ class GameViewController: UIViewController {
     var userInputCode = ""
     var nextLabelIndex = 0
     
-    
-    
-  
-    
     // MARK: - View Controller Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-       
         
         // Fetch the code
         codeManager.delegate = self
@@ -53,7 +50,7 @@ class GameViewController: UIViewController {
         historyTableView.register(nib, forCellReuseIdentifier: "HistoryTableViewCell1")
         
         historyTableView.dataSource = self
-        
+        historyTableView.separatorStyle = .none
         
     }
     
@@ -61,15 +58,15 @@ class GameViewController: UIViewController {
     
     @objc func submitButtonTapped() {
         
-        
-        
         if inputHistoryArray.count >= Int(attempts!)! - 1 {
-           print("game over")
-         
+            print("game over")
+            let alertPopUp = AlertPopUpLayer()
+            alertPopUp.appear(sender: self)
+            
+            
             
             
         }
-        
         
         // Reset userInputCode to an empty string
         userInputCode = ""
@@ -81,21 +78,16 @@ class GameViewController: UIViewController {
                 textField.text = ""
             }
             
-
         }
-        
-     
         
         // Get the result of checkUserSubmit
         let result = GameLogic.checkUserSubmit(userInputCode: &userInputCode, code: code!)
-        
-        
         
         // Create a new input history object and add it to the array
         let inputHistoryItem = InputHistoryModel(userInput: userInputCode, result: result)
         
         print("inputHistoryItem.u:  \(inputHistoryItem.userInput)")
-       
+        
         inputHistoryArray.append(inputHistoryItem)
         
         historyTableView.reloadData()
@@ -112,9 +104,50 @@ class GameViewController: UIViewController {
     }
     
     
+   
     
+    // Function to update the input history display
     
+}
+
+//MARK: - CodeManagerDelegate - for comunicating with GameVC
+
+extension GameViewController: CodeManagerDelegate { // all the code functions
     
+    func didUpdateCode(_ codeManager: CodeManager, fetchedCode: String) {
+        DispatchQueue.main.async {
+            self.codeNumLabel.text = fetchedCode
+            self.code = fetchedCode
+            
+        }
+        
+    }
+    
+    func didFailedWithError(error: Error) {
+        print(error)
+    }
+}
+
+//MARK: - history Table View DataSource
+extension GameViewController: UITableViewDataSource { // extend GameViewController to conform to the UITableViewDataSource protocol
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { // required method that returns the number of rows in the table view
+        return inputHistoryArray.count // returns the count of items in the inputHistoryArray
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { // required method that creates and configures cells for the table view
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryTableViewCell1", for: indexPath) as! HistoryTableViewCell1 // dequeue a reusable cell with the identifier "HistoryTableViewCell1"
+        let inputHistoryItem = inputHistoryArray[indexPath.row] // retrieve the corresponding input history item for the current row
+        // set the textLabel of the cell to display the user input and corresponding number and location data from the inputHistoryItem
+        cell.leftTextLabel.text = inputHistoryItem.userInput
+        cell.rightTextLabel.text = ("\(inputHistoryItem.numAndLocation),\(inputHistoryItem.onlyNum)")
+        
+        return cell // return the configured cell
+    }
+}
+
+
+extension GameViewController {
     //MARK: - Update UI
     
     func updateUI() {
@@ -125,7 +158,7 @@ class GameViewController: UIViewController {
         textStackView.spacing = 8 // set spacing between fields
         
         // create text fields and add them to the stack view
-        for _ in 1...codeLenght! {
+        for _ in 1...(codeLenght ?? 4) {
             let textField = UITextField()
             
             // Configure the text field appearance
@@ -167,46 +200,4 @@ class GameViewController: UIViewController {
         
         
     }
-    
-    // Function to update the input history display
-    
-    
 }
-
-//MARK: - CodeManagerDelegate - for comunicating with GameVC
-
-extension GameViewController: CodeManagerDelegate { // all the code functions
-    
-    func didUpdateCode(_ codeManager: CodeManager, fetchedCode: String) {
-        DispatchQueue.main.async {
-            self.codeNumLabel.text = fetchedCode
-            self.code = fetchedCode
-            
-        }
-        
-    }
-    
-    func didFailedWithError(error: Error) {
-        print(error)
-    }
-}
-
-//MARK: - history Table View
-
-extension GameViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return inputHistoryArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryTableViewCell1", for: indexPath)
-        let inputHistoryItem = inputHistoryArray[indexPath.row]
-        cell.textLabel?.text = "\(inputHistoryItem.userInput) \(inputHistoryItem.numAndLocation)"
-        return cell
-    }
-    
-}
-
-
-
