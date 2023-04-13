@@ -2,7 +2,7 @@ import Foundation
 
 // Update the delegate methods to pass a string
 protocol CodeManagerDelegate {
-    func didUpdateCode(_ codeManager: CodeManager, fetchedCode: String)
+    func didUpdateCode(_ codeManager: CodeManager, fetchedCode: String, gameSettings: GameSettings)
     func didFailedWithError(error: Error)
 }
 
@@ -12,13 +12,14 @@ struct CodeManager {
     var delegate: CodeManagerDelegate?
     
     // Function to fetch code from the server
-    func fetchWeather(codeLength: Int) {
+    func fetchWeather(codeLength: Int, gameSettings: GameSettings) {
         let urlString = "\(codeURL)\(codeLength)" // Adding code length to the URL
-        performRequest(with: urlString) // Calling the function to perform the request
+        performRequest(with: urlString, gameSettings: gameSettings) // Calling the function to perform the request
     }
+
     
     // Function to perform the network request
-    func performRequest(with urlString: String){
+    func performRequest(with urlString: String, gameSettings: GameSettings){
         if let url = URL(string: urlString) { // Creating URL from the urlString
             let session = URLSession(configuration: .default) // Creating URLSession object
             let task = session.dataTask(with: url) { (data, response, error) in // Creating a data task to retrieve data from the server
@@ -34,7 +35,7 @@ struct CodeManager {
                         print(noSpaceCode)
                         
                         // Pass the fetched code as a string to the delegate
-                        self.delegate?.didUpdateCode(self, fetchedCode: noSpaceCode)
+                        self.delegate?.didUpdateCode(self, fetchedCode: noSpaceCode, gameSettings: gameSettings)
                         
                     } else {
                         print("Failed to convert code data to string.")

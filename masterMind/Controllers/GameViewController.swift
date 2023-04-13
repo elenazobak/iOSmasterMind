@@ -21,10 +21,8 @@ class GameViewController: UIViewController {
     // Array to store the user's input history
     var inputHistoryArray: [InputHistoryModel] = [] //var history: [InputHistory] = []
     
+    var gameSettings = GameSettings(code: "", codeLength: 0, attempts: 0)
     
-    var code: String?
-    var codeLenght: Int?
-    var attempts: String?
     var codeManager = CodeManager()
     // OTPFieldView and stackview to display input fields
     let textStackView = UIStackView()
@@ -34,7 +32,7 @@ class GameViewController: UIViewController {
     let submitButton = UIButton(type: .system)
     // Variable to store user input
     var userInputCode = ""
-    var nextLabelIndex = 0
+   
     
     // MARK: - View Controller Life Cycle
     
@@ -44,55 +42,54 @@ class GameViewController: UIViewController {
         
         // Fetch the code
         codeManager.delegate = self
-        codeManager.fetchWeather(codeLength: codeLenght! )
+        codeManager.fetchWeather(codeLength: gameSettings.codeLength, gameSettings: gameSettings )
         
         let nib = UINib(nibName: "HistoryTableViewCell1", bundle: nil)
         historyTableView.register(nib, forCellReuseIdentifier: "HistoryTableViewCell1")
         
         historyTableView.dataSource = self
         historyTableView.separatorStyle = .none
-        
-    }
+        // Create a custom back button
+           let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backButtonTapped))
+           
+           // Set the back button as the left item of the navigation item
+           navigationItem.leftBarButtonItem = backButton
+       }
+
+       @objc func backButtonTapped() {
+           navigationController?.popViewController(animated: true)
+       }
+    
     
     // MARK: - Button Actions
     
     @objc func submitButtonTapped() {
-        
-        if inputHistoryArray.count >= Int(attempts!)! - 1 {
+        if inputHistoryArray.count >= gameSettings.attempts - 1 {
             print("game over")
             let alertPopUp = AlertPopUpLayer()
             alertPopUp.appear(sender: self)
-            
-            
-            
-            
         }
         
         // Reset userInputCode to an empty string
         userInputCode = ""
         
         // Loop through each text field in the stack view and append the text from each field to the userInputCode variable
-        for case let textField as UITextField in textStackView.arrangedSubviews {
-            if let text = textField.text {
+        for case let codeTextField as UITextField in textStackView.arrangedSubviews {
+            if let text = codeTextField.text {
                 userInputCode.append(text)
-                textField.text = ""
+                codeTextField.text = ""
             }
-            
         }
         
         // Get the result of checkUserSubmit
-        let result = GameLogic.checkUserSubmit(userInputCode: &userInputCode, code: code!)
+        let result = GameLogic.checkUserSubmit(userInputCode: &userInputCode, code: gameSettings.code)
         
         // Create a new input history object and add it to the array
         let inputHistoryItem = InputHistoryModel(userInput: userInputCode, result: result)
-        
         print("inputHistoryItem.u:  \(inputHistoryItem.userInput)")
-        
         inputHistoryArray.append(inputHistoryItem)
         
         historyTableView.reloadData()
-        
-        //print(inputHistoryArray[0].userInput)
         
         for inputHistoryItem in inputHistoryArray {
             print("from inputHistoryArray - User input: \(inputHistoryItem.userInput), numAndLoc: \(inputHistoryItem.numAndLocation)")
@@ -100,11 +97,10 @@ class GameViewController: UIViewController {
         
         // Clear the user's input
         userInputCode = ""
-        //addHistoryLabelsToStackView()
     }
     
     
-   
+    
     
     // Function to update the input history display
     
@@ -114,15 +110,11 @@ class GameViewController: UIViewController {
 
 extension GameViewController: CodeManagerDelegate { // all the code functions
     
-    func didUpdateCode(_ codeManager: CodeManager, fetchedCode: String) {
-        DispatchQueue.main.async {
-            self.codeNumLabel.text = fetchedCode
-            self.code = fetchedCode
-            
-        }
-        
+    func didUpdateCode(_ codeManager: CodeManager, fetchedCode: String, gameSettings: GameSettings) {
+        self.gameSettings.code = fetchedCode // Set the gameSettings.code property to the fetched code
+        print("Fetched code: \(fetchedCode)")
+        // ...
     }
-    
     func didFailedWithError(error: Error) {
         print(error)
     }
@@ -158,7 +150,7 @@ extension GameViewController {
         textStackView.spacing = 8 // set spacing between fields
         
         // create text fields and add them to the stack view
-        for _ in 1...(codeLenght ?? 4) {
+        for _ in 1...(gameSettings.codeLength) {
             let textField = UITextField()
             
             // Configure the text field appearance

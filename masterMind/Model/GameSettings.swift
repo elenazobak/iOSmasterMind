@@ -10,5 +10,5 @@ import Foundation
 struct GameSettings {
     var code: String
     var codeLength: Int
-    var attempts: String
+    var attempts: Int
 }
