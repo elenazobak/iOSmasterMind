@@ -32,7 +32,7 @@ struct CodeManager {
                         let noSpaceCode = codeDataString
                             .components(separatedBy: .whitespacesAndNewlines) // Split into substrings by whitespace and newlines
                             .joined(separator: "") // Join the substrings into a single string with no space
-                        print(noSpaceCode)
+                        
                         
                         // Pass the fetched code as a string to the delegate
                         self.delegate?.didUpdateCode(self, fetchedCode: noSpaceCode, gameSettings: gameSettings)

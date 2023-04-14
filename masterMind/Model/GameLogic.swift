@@ -14,12 +14,14 @@ class GameLogic {
         // Create a dictionary to store the counts of each digit in the code
         var numberObj = [Character: Int]()
         var tempUserInput = userInputCode
+        
         // Initialize the counts to 0
         var numAndLocation = 0
         var onlyNum = 0
         
         // Check for well-positioned digits
         for i in code.indices {
+            
             // Counts the well-positioned digits and replaces them with a space in the user input code
             if code[i] == tempUserInput[i] {
                 numAndLocation += 1

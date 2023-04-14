@@ -17,7 +17,6 @@
 		F3216DA929D221680041DF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3216DA729D221680041DF71 /* LaunchScreen.storyboard */; };
 		F3216DB129D31EDE0041DF71 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DB029D31EDE0041DF71 /* GameViewController.swift */; };
 		F3216DB729D352260041DF71 /* CodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DB629D352260041DF71 /* CodeManager.swift */; };
-		F3216DBB29D3544E0041DF71 /* CodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DBA29D3544E0041DF71 /* CodeModel.swift */; };
 		F3216DC029D62C200041DF71 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DBF29D62C200041DF71 /* GameLogic.swift */; };
 		F3216DC229D72A340041DF71 /* InputHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DC129D72A340041DF71 /* InputHistoryModel.swift */; };
 		F399689A29DC931600FA4DA7 /* AlertPopUpLayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = F399689829DC931600FA4DA7 /* AlertPopUpLayer.xib */; };
@@ -42,7 +41,6 @@
 		F3216DAA29D221680041DF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3216DB029D31EDE0041DF71 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		F3216DB629D352260041DF71 /* CodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeManager.swift; sourceTree = "<group>"; };
-		F3216DBA29D3544E0041DF71 /* CodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeModel.swift; sourceTree = "<group>"; };
 		F3216DBF29D62C200041DF71 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		F3216DC129D72A340041DF71 /* InputHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputHistoryModel.swift; sourceTree = "<group>"; };
 		F399689729DC931600FA4DA7 /* AlertPopUpLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPopUpLayer.swift; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				F3216DB629D352260041DF71 /* CodeManager.swift */,
-				F3216DBA29D3544E0041DF71 /* CodeModel.swift */,
 				F3216DBF29D62C200041DF71 /* GameLogic.swift */,
 				F3216DC129D72A340041DF71 /* InputHistoryModel.swift */,
 				F399689C29E031D400FA4DA7 /* GameSettings.swift */,
@@ -283,7 +280,6 @@
 				F3216D9C29D221670041DF71 /* SceneDelegate.swift in Sources */,
 				F399689D29E031D400FA4DA7 /* GameSettings.swift in Sources */,
 				F3216DB729D352260041DF71 /* CodeManager.swift in Sources */,
-				F3216DBB29D3544E0041DF71 /* CodeModel.swift in Sources */,
 				F3216DA429D221670041DF71 /* masterMind.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

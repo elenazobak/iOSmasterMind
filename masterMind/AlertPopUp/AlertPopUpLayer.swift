@@ -1,10 +1,3 @@
-//
-//  AlertPopUpLayer.swift
-//  masterMind
-//
-//  Created by Elena Zobak on 4/4/23.
-//
-
 import UIKit
 
 class AlertPopUpLayer: UIViewController {
@@ -18,7 +11,12 @@ class AlertPopUpLayer: UIViewController {
         hide()
     }
     
-    // Initializing the view controller with a custom nib file named "OverLayerView" and setting the modalPresentationStyle to .overFullScreen.
+    // Customizable properties
+    var animationDuration: TimeInterval = 1.0 // Animation duration for show/hide animations
+    var backgroundAlpha: CGFloat = 0.6 // Alpha value for the background view
+    var cornerRadius: CGFloat = 10 // Corner radius for the content view
+    
+    // Initializing the view controller with a custom nib file named "AlertPopUpLayer" and setting the modalPresentationStyle to .overFullScreen.
     init() {
         super.init(nibName: "AlertPopUpLayer", bundle: nil)
         self.modalPresentationStyle = .overFullScreen
@@ -39,36 +37,35 @@ class AlertPopUpLayer: UIViewController {
     // A private function to configure the appearance of the views.
     private func configView() {
         self.view.backgroundColor = .clear
-        self.backView.backgroundColor = .black.withAlphaComponent(0.6)
+        self.backView.backgroundColor = .black.withAlphaComponent(backgroundAlpha)
         self.backView.alpha = 0
         self.contantView.alpha = 0
-        self.contantView.layer.cornerRadius = 10
+        self.contantView.layer.cornerRadius = cornerRadius
     }
 
     // A function to present the overlay view controller from another view controller.
-    func appear(sender: GameViewController) {
+    func appear(sender: UIViewController) {
         sender.present(self, animated: false) {
             self.show()
         }
     }
 
-    
     // Animates the overlay to show
-       private func show() {
-           UIView.animate(withDuration: 1, delay: 0.2) {
-               self.backView.alpha = 1 // Set the alpha of the background view to 1
-               self.contantView.alpha = 1 // Set the alpha of the content view to 1
-           }
-       }
-       
-       // Animates the overlay to hide and removes it from its parent view controller
-       func hide() {
-           UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut) {
-               self.backView.alpha = 0 // Set the alpha of the background view to 0
-               self.contantView.alpha = 0 // Set the alpha of the content view to 0
-           } completion: { _ in
-               self.dismiss(animated: false) // Dismiss the overlay view controller
-               self.removeFromParent() // Remove the overlay view controller from its parent view controller
-           }
-       }
+    private func show() {
+        UIView.animate(withDuration: animationDuration, delay: 0.2) {
+            self.backView.alpha = 1 // Set the alpha of the background view to 1
+            self.contantView.alpha = 1 // Set the alpha of the content view to 1
+        }
+    }
+
+    // Animates the overlay to hide and removes it from its parent view controller
+    func hide() {
+        UIView.animate(withDuration: animationDuration, delay: 0, options: .curveEaseOut) {
+            self.backView.alpha = 0 // Set the alpha of the background view to 0
+            self.contantView.alpha = 0 // Set the alpha of the content view to 0
+        } completion: { _ in
+            self.dismiss(animated: false) // Dismiss the overlay view controller
+            self.removeFromParent() // Remove the overlay view controller from its parent view controller
+        }
+    }
 }
