@@ -23,7 +23,7 @@ class GameLogic {
         for i in code.indices {
             
             // Counts the well-positioned digits and replaces them with a space in the user input code
-            if code[i] == tempUserInput[i] {
+             if code[i] == tempUserInput[i] {
                 numAndLocation += 1
                 tempUserInput.replaceSubrange(i...i, with: " ")
             } else {

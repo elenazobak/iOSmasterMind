@@ -2,10 +2,13 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    let smallButtonsSize: CGFloat = 40
+    let buttonCornerRadius: CGFloat = 20
+    
     let attemptsLabel: UILabel = {
         let label = UILabel()
         label.text = "Attempts:"
-        label.font = UIFont(name: "Futura-Bold", size: 20) // Use Futura-Bold font with size 20
+        label.font = UIFont(name: "Futura-Bold", size: 18) // Use Futura-Bold font with size 20
         label.textColor = UIColor(hex: 0x273c75) // Set text color to #273c75
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -14,7 +17,7 @@ class HomeViewController: UIViewController {
     let attemptsCountLabel: UILabel = {
         let label = UILabel()
         label.text = "6"
-        label.font = UIFont(name: "Futura-Bold", size: 23) // Use Futura-Bold font with size 20
+        label.font = UIFont(name: "Futura", size: 23) // Use Futura-Bold font with size 20
         label.textColor = UIColor(hex: 0x273c75) // Set text color to #273c75
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -22,17 +25,35 @@ class HomeViewController: UIViewController {
     
     let attemptsAddButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal)
-        button.tintColor = UIColor(red: 0.69, green: 0.95, blue: 0.98, alpha: 1.00)
+        button.setTitle("+", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Futura-Bold", size: 24) // Set font to Futura-Bold with size 24
+        button.setTitleColor(.white, for: .normal) // Set text color to white
+        button.backgroundColor = UIColor(red: 0.69, green: 0.95, blue: 0.98, alpha: 1.00)
         button.translatesAutoresizingMaskIntoConstraints = false
+   
+        button.layer.masksToBounds = true
+        // Set content vertical alignment to center
+        button.contentVerticalAlignment = .center
+        // Set content horizontal alignment to center
+        button.contentHorizontalAlignment = .center
         return button
     }()
-    
+
     let attemptsSubtractButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal)
-        button.tintColor = UIColor(red: 0.69, green: 0.95, blue: 0.98, alpha: 1.00)
+        button.setTitle("-", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Futura-Bold", size: 24) // Set font to Futura-Bold with size 24
+        button.setTitleColor(.white, for: .normal) // Set text color to white
+        button.backgroundColor = UIColor(red: 0.69, green: 0.95, blue: 0.98, alpha: 1.00)
         button.translatesAutoresizingMaskIntoConstraints = false
+        // Increase width and height constraints
+        // Set corner radius to half of width
+     
+        button.layer.masksToBounds = true
+        // Set content vertical alignment to center
+        button.contentVerticalAlignment = .center
+        // Set content horizontal alignment to center
+        button.contentHorizontalAlignment = .center
         return button
     }()
     
@@ -53,7 +74,7 @@ class HomeViewController: UIViewController {
     let codeLengthLabel: UILabel = {
         let label = UILabel()
         label.text = "Code Length:"
-        label.font = UIFont(name: "Futura-Bold", size: 20) // Use Futura-Bold font with size 20
+        label.font = UIFont(name: "Futura-Bold", size: 18) // Use Futura-Bold font with size 20
         label.textColor = UIColor(hex: 0x273c75) // Set text color to #273c75
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -62,7 +83,7 @@ class HomeViewController: UIViewController {
     let codeLengthCountLabel: UILabel = {
         let label = UILabel()
         label.text = "4"
-        label.font = UIFont(name: "Futura-Bold", size: 23) // Use Futura-Bold font with size 20
+        label.font = UIFont(name: "Futura", size: 23) // Use Futura-Bold font with size 20
         label.textColor = UIColor(hex: 0x273c75) // Set text color to #273c75
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -70,17 +91,36 @@ class HomeViewController: UIViewController {
     
     let codeLengthAddButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal)
-        button.tintColor = UIColor(red: 0.69, green: 0.95, blue: 0.98, alpha: 1.00)
+        button.setTitle("+", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Futura-Bold", size: 24) // Set font to Futura-Bold with size 24
+        button.setTitleColor(.white, for: .normal) // Set text color to white
+        button.backgroundColor = UIColor(red: 0.69, green: 0.95, blue: 0.98, alpha: 1.00)
         button.translatesAutoresizingMaskIntoConstraints = false
+        // Increase width and height constraints
+        // Set corner radius to half of width
+      
+        button.layer.masksToBounds = true
+        // Set content vertical alignment to center
+        button.contentVerticalAlignment = .center
+        // Set content horizontal alignment to center
+        button.contentHorizontalAlignment = .center
         return button
     }()
     
     let codeLengthSubtractButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "minus.circle.fill"), for: .normal)
-        button.tintColor = UIColor(red: 0.69, green: 0.95, blue: 0.98, alpha: 1.00)
+        button.setTitle("-", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Futura-Bold", size: 24) // Set font to Futura-Bold with size 24
+        button.setTitleColor(.white, for: .normal) // Set text color to white
+        button.backgroundColor = UIColor(red: 0.69, green: 0.95, blue: 0.98, alpha: 1.00)
         button.translatesAutoresizingMaskIntoConstraints = false
+        // Increase width and height constraints
+    
+        button.layer.masksToBounds = true
+        // Set content vertical alignment to center
+        button.contentVerticalAlignment = .center
+        // Set content horizontal alignment to center
+        button.contentHorizontalAlignment = .center
         return button
     }()
     
@@ -126,9 +166,22 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor(red: 0.69, green: 0.95, blue: 0.98, alpha: 1.00)
-             
-        view.addSubview(playButton)
         
+        attemptsAddButton.widthAnchor.constraint(equalToConstant: smallButtonsSize).isActive = true
+        attemptsAddButton.heightAnchor.constraint(equalToConstant: smallButtonsSize).isActive = true
+        attemptsSubtractButton.heightAnchor.constraint(equalToConstant: smallButtonsSize).isActive = true
+        attemptsSubtractButton.widthAnchor.constraint(equalToConstant: smallButtonsSize).isActive = true
+        codeLengthAddButton.widthAnchor.constraint(equalToConstant: smallButtonsSize).isActive = true
+        codeLengthAddButton.heightAnchor.constraint(equalToConstant: smallButtonsSize).isActive = true
+        codeLengthSubtractButton.widthAnchor.constraint(equalToConstant: smallButtonsSize).isActive = true
+        codeLengthSubtractButton.heightAnchor.constraint(equalToConstant: smallButtonsSize).isActive = true
+        
+        attemptsAddButton.layer.cornerRadius = buttonCornerRadius
+        attemptsSubtractButton.layer.cornerRadius = buttonCornerRadius
+        codeLengthAddButton.layer.cornerRadius = buttonCornerRadius
+        codeLengthSubtractButton.layer.cornerRadius = buttonCornerRadius
+        
+        view.addSubview(playButton)
         view.addSubview(titleLabel)
         
         NSLayoutConstraint.activate([
@@ -150,39 +203,39 @@ class HomeViewController: UIViewController {
             bulbImageView.heightAnchor.constraint(equalToConstant: 100)
         ])
         
-        // Create the horizontal stack view
+        // Create the horizontal stack view for attempts
         let attemptsStackView = UIStackView(arrangedSubviews: [attemptsLabel, attemptsSubtractButton, attemptsCountLabel, attemptsAddButton])
         attemptsStackView.translatesAutoresizingMaskIntoConstraints = false
         attemptsStackView.axis = .horizontal
+        attemptsStackView.spacing = 4
         attemptsStackView.distribution = .equalSpacing
         attemptsStackView.alignment = .center
         
         // Add the stack view to the attempts view
         attemptsView.addSubview(attemptsStackView)
-       
         view.addSubview(attemptsView)
       
-        // Set the constraints for the stack view
+        // Set the constraints for the stack view for attempts
         NSLayoutConstraint.activate([
             attemptsStackView.centerYAnchor.constraint(equalTo: attemptsView.centerYAnchor),
             attemptsStackView.centerXAnchor.constraint(equalTo: attemptsView.centerXAnchor),
             attemptsStackView.widthAnchor.constraint(equalTo: attemptsView.widthAnchor, multiplier: 0.8),
             attemptsStackView.heightAnchor.constraint(equalTo: attemptsView.heightAnchor)
         ])
-        attemptsAddButton.addTarget(self, action: #selector(addAttempt), for: .touchUpInside)
-        attemptsSubtractButton.addTarget(self, action: #selector(subtractAttempt), for: .touchUpInside)
+
+        //**CodeLengh
+        // Create the horizontal stack view for code length
         // Create the horizontal stack view for code length
         let codeLengthStackView = UIStackView(arrangedSubviews: [codeLengthLabel, codeLengthSubtractButton, codeLengthCountLabel, codeLengthAddButton])
         codeLengthStackView.translatesAutoresizingMaskIntoConstraints = false
         codeLengthStackView.axis = .horizontal
         codeLengthStackView.distribution = .equalSpacing
         codeLengthStackView.alignment = .center
-        
+
         // Add the stack view to the code length view
         codeLengthView.addSubview(codeLengthStackView)
-        
-        // Add the code length view to the main view
         view.addSubview(codeLengthView)
+        
         // Set the constraints for the stack view for code length
         NSLayoutConstraint.activate([
             codeLengthStackView.centerYAnchor.constraint(equalTo: codeLengthView.centerYAnchor),
@@ -190,9 +243,11 @@ class HomeViewController: UIViewController {
             codeLengthStackView.widthAnchor.constraint(equalTo: codeLengthView.widthAnchor, multiplier: 0.8),
             codeLengthStackView.heightAnchor.constraint(equalTo: codeLengthView.heightAnchor)
         ])
-     // Add targets for the buttons
-        codeLengthAddButton.addTarget(self, action: #selector(codeLengthAddButtonTapped), for: .touchUpInside)
         
+     // Add targets for the buttons
+        attemptsAddButton.addTarget(self, action: #selector(addAttempt), for: .touchUpInside)
+        attemptsSubtractButton.addTarget(self, action: #selector(subtractAttempt), for: .touchUpInside)
+        codeLengthAddButton.addTarget(self, action: #selector(codeLengthAddButtonTapped), for: .touchUpInside)
         codeLengthSubtractButton.addTarget(self, action: #selector(codeLengthSubtractButtonTapped), for: .touchUpInside)
    
         setupConstraints()
@@ -200,34 +255,56 @@ class HomeViewController: UIViewController {
     }
     
     func setupConstraints() {
-            
+                
         // Add constraints for positioning the play button
         NSLayoutConstraint.activate([
-            playButton.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center playButton horizontally in view
-            playButton.topAnchor.constraint(equalTo: codeLengthSubtractButton.bottomAnchor, constant: 100), // Position playButton below codeLengthSubtractButton with a top spacing of 100
-            playButton.widthAnchor.constraint(equalToConstant: 120), // Set width of playButton to 120
-            playButton.heightAnchor.constraint(equalToConstant: 50), // Set height of playButton to 50
             
-            codeLengthView.topAnchor.constraint(equalTo: attemptsView.bottomAnchor, constant: 30), // Position codeLengthView below attemptsView with a top spacing of 30
-            codeLengthView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40), // Position codeLengthView leading edge to view's leading edge with a spacing of 40
-            codeLengthView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40), // Position codeLengthView trailing edge to view's trailing edge with a spacing of -40
-            codeLengthView.heightAnchor.constraint(equalToConstant: 60), // Set height of codeLengthView to 60
-            codeLengthSubtractButton.leadingAnchor.constraint(equalTo: codeLengthLabel.trailingAnchor, constant: 10), // Position codeLengthSubtractButton leading edge to codeLengthLabel's trailing edge with a spacing of 10
-            codeLengthSubtractButton.centerYAnchor.constraint(equalTo: codeLengthView.centerYAnchor), // Center codeLengthSubtractButton vertically in codeLengthView
+            // Position playButton below codeLengthSubtractButton with a top spacing of 100
+            playButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            playButton.topAnchor.constraint(equalTo: codeLengthSubtractButton.bottomAnchor, constant: 100),
+            // Set width of playButton to 120
+            playButton.widthAnchor.constraint(equalToConstant: 120),
+            // Set height of playButton to 50
+            playButton.heightAnchor.constraint(equalToConstant: 50),
             
-            attemptsView.centerYAnchor.constraint(equalTo: view.centerYAnchor), // Center attemptsView vertically in view
-            attemptsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40), // Position attemptsView leading edge to view's leading edge with a spacing of 40
-            attemptsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40), // Position attemptsView trailing edge to view's trailing edge with a spacing of -40
-            //attemptsView.widthAnchor.constraint(equalToConstant: 150), // Optional constraint to set width of attemptsView to 150
-            attemptsView.heightAnchor.constraint(equalToConstant: 60), // Set height of attemptsView to 60
-            attemptsSubtractButton.leadingAnchor.constraint(equalTo: attemptsLabel.trailingAnchor, constant: 10), // Position attemptsSubtractButton leading edge to attemptsLabel's trailing edge with a spacing of 10
-            attemptsSubtractButton.centerYAnchor.constraint(equalTo: attemptsLabel.centerYAnchor), // Center attemptsSubtractButton vertically in attemptsLabel
+            // Position codeLengthView below attemptsView with a top spacing of 30
+            codeLengthView.topAnchor.constraint(equalTo: attemptsView.bottomAnchor, constant: 30),
+            // Position codeLengthView leading edge to view's leading edge with a spacing of 40
+            codeLengthView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            // Position codeLengthView trailing edge to view's trailing edge with a spacing of -40
+            codeLengthView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            // Set height of codeLengthView to 60
+            codeLengthView.heightAnchor.constraint(equalToConstant: 60),
+            
+            // Position codeLengthSubtractButton leading edge to codeLengthLabel's trailing edge with a spacing of 10
+            codeLengthSubtractButton.leadingAnchor.constraint(equalTo: codeLengthLabel.trailingAnchor, constant: 5),
+            // Center codeLengthSubtractButton vertically in codeLengthView
+            codeLengthSubtractButton.centerYAnchor.constraint(equalTo: codeLengthView.centerYAnchor),
+            
+            // Center attemptsView vertically in view
+            attemptsView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            // Position attemptsView leading edge to view's leading edge with a spacing of 40
+            attemptsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            // Position attemptsView trailing edge to view's trailing edge with a spacing of -40
+            attemptsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            // Set height of attemptsView to 60
+            attemptsView.heightAnchor.constraint(equalToConstant: 60),
+            
+            // Position attemptsSubtractButton leading edge to attemptsLabel's trailing edge with a spacing of 10
+            attemptsSubtractButton.leadingAnchor.constraint(equalTo: attemptsLabel.trailingAnchor, constant: 10),
+            //codeLengthSubtractButton.centerXAnchor.constraint(equalTo: attemptsSubtractButton.centerXAnchor),
+           // codeLengthAddButton.centerXAnchor.constraint(equalTo: attemptsAddButton.centerXAnchor),
+           // codeLengthCountLabel.widthAnchor.constraint(equalTo: attemptsCountLabel.widthAnchor),
+            codeLengthCountLabel.centerXAnchor.constraint(equalTo: attemptsCountLabel.centerXAnchor),
+           
+        
+        
         ])
     }
     
     
     @objc func addAttempt() {
-        if attemptsCount < 12 {
+        if attemptsCount < 15 {
             attemptsCount += 1
         }
     }
