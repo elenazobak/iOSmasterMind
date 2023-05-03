@@ -290,9 +290,6 @@ class GameViewController: UIViewController, AlertPopUpDelegate {
         
         historyTableView.reloadData()
         
-        for inputHistoryItem in inputHistoryArray {
-            print("from inputHistoryArray - User input: \(inputHistoryItem.userInput), numAndLoc: \(inputHistoryItem.numAndLocation), onlyNum: \(inputHistoryItem.onlyNum)")
-        }
         // Clear the user's input
         userInputCode = ""
         
@@ -328,7 +325,7 @@ extension GameViewController: CodeManagerDelegate { // all the code functions
     
     func didUpdateCode(_ codeManager: CodeManager, fetchedCode: String, gameSettings: GameSettings) {
         self.gameSettings.code = fetchedCode // Set the gameSettings.code property to the fetched code
-        print("Fetched code: \(fetchedCode)")
+       // print("Fetched code: \(fetchedCode)")
         // ...
     }
     func didFailedWithError(error: Error) {

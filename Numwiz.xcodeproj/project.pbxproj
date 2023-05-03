@@ -30,7 +30,7 @@
 		281A18AA442CBB7943E5C473 /* Pods-masterMind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-masterMind.debug.xcconfig"; path = "Target Support Files/Pods-masterMind/Pods-masterMind.debug.xcconfig"; sourceTree = "<group>"; };
 		8547D5C6D9D985D53C48D37C /* Pods_masterMind.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_masterMind.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4F1D37ACCB7C00E68C4CDD /* Pods-masterMind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-masterMind.release.xcconfig"; path = "Target Support Files/Pods-masterMind/Pods-masterMind.release.xcconfig"; sourceTree = "<group>"; };
-		F3216D9629D221670041DF71 /* masterMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = masterMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3216D9629D221670041DF71 /* Numwiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Numwiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3216D9929D221670041DF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3216D9B29D221670041DF71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F3216D9D29D221670041DF71 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		F3216D9729D221670041DF71 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3216D9629D221670041DF71 /* masterMind.app */,
+				F3216D9629D221670041DF71 /* Numwiz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,9 +156,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F3216D9529D221670041DF71 /* masterMind */ = {
+		F3216D9529D221670041DF71 /* Numwiz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3216DAD29D221680041DF71 /* Build configuration list for PBXNativeTarget "masterMind" */;
+			buildConfigurationList = F3216DAD29D221680041DF71 /* Build configuration list for PBXNativeTarget "Numwiz" */;
 			buildPhases = (
 				E2D5445FBB0508974D94F240 /* [CP] Check Pods Manifest.lock */,
 				F3216D9229D221670041DF71 /* Sources */,
@@ -170,9 +170,9 @@
 			);
 			dependencies = (
 			);
-			name = masterMind;
+			name = Numwiz;
 			productName = masterMind;
-			productReference = F3216D9629D221670041DF71 /* masterMind.app */;
+			productReference = F3216D9629D221670041DF71 /* Numwiz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -190,7 +190,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F3216D9129D221660041DF71 /* Build configuration list for PBXProject "masterMind" */;
+			buildConfigurationList = F3216D9129D221660041DF71 /* Build configuration list for PBXProject "Numwiz" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -203,7 +203,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F3216D9529D221670041DF71 /* masterMind */,
+				F3216D9529D221670041DF71 /* Numwiz */,
 			);
 		};
 /* End PBXProject section */
@@ -434,6 +434,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -441,7 +442,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Elena.masterMind;
+				PRODUCT_BUNDLE_IDENTIFIER = Elena.numwiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -463,6 +464,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +472,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Elena.masterMind;
+				PRODUCT_BUNDLE_IDENTIFIER = Elena.numwiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -481,7 +483,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F3216D9129D221660041DF71 /* Build configuration list for PBXProject "masterMind" */ = {
+		F3216D9129D221660041DF71 /* Build configuration list for PBXProject "Numwiz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F3216DAB29D221680041DF71 /* Debug */,
@@ -490,7 +492,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3216DAD29D221680041DF71 /* Build configuration list for PBXNativeTarget "masterMind" */ = {
+		F3216DAD29D221680041DF71 /* Build configuration list for PBXNativeTarget "Numwiz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F3216DAE29D221680041DF71 /* Debug */,
