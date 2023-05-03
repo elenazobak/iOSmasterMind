@@ -30,7 +30,7 @@
 		281A18AA442CBB7943E5C473 /* Pods-masterMind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-masterMind.debug.xcconfig"; path = "Target Support Files/Pods-masterMind/Pods-masterMind.debug.xcconfig"; sourceTree = "<group>"; };
 		8547D5C6D9D985D53C48D37C /* Pods_masterMind.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_masterMind.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4F1D37ACCB7C00E68C4CDD /* Pods-masterMind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-masterMind.release.xcconfig"; path = "Target Support Files/Pods-masterMind/Pods-masterMind.release.xcconfig"; sourceTree = "<group>"; };
-		F3216D9629D221670041DF71 /* Numwiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Numwiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3216D9629D221670041DF71 /* Numwix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Numwix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3216D9929D221670041DF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3216D9B29D221670041DF71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F3216D9D29D221670041DF71 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		F3216D9729D221670041DF71 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3216D9629D221670041DF71 /* Numwiz.app */,
+				F3216D9629D221670041DF71 /* Numwix.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,9 +156,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F3216D9529D221670041DF71 /* Numwiz */ = {
+		F3216D9529D221670041DF71 /* Numwix */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3216DAD29D221680041DF71 /* Build configuration list for PBXNativeTarget "Numwiz" */;
+			buildConfigurationList = F3216DAD29D221680041DF71 /* Build configuration list for PBXNativeTarget "Numwix" */;
 			buildPhases = (
 				E2D5445FBB0508974D94F240 /* [CP] Check Pods Manifest.lock */,
 				F3216D9229D221670041DF71 /* Sources */,
@@ -170,9 +170,9 @@
 			);
 			dependencies = (
 			);
-			name = Numwiz;
+			name = Numwix;
 			productName = masterMind;
-			productReference = F3216D9629D221670041DF71 /* Numwiz.app */;
+			productReference = F3216D9629D221670041DF71 /* Numwix.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -190,7 +190,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F3216D9129D221660041DF71 /* Build configuration list for PBXProject "Numwiz" */;
+			buildConfigurationList = F3216D9129D221660041DF71 /* Build configuration list for PBXProject "Numwix" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -203,7 +203,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F3216D9529D221670041DF71 /* Numwiz */,
+				F3216D9529D221670041DF71 /* Numwix */,
 			);
 		};
 /* End PBXProject section */
@@ -483,7 +483,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F3216D9129D221660041DF71 /* Build configuration list for PBXProject "Numwiz" */ = {
+		F3216D9129D221660041DF71 /* Build configuration list for PBXProject "Numwix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F3216DAB29D221680041DF71 /* Debug */,
@@ -492,7 +492,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3216DAD29D221680041DF71 /* Build configuration list for PBXNativeTarget "Numwiz" */ = {
+		F3216DAD29D221680041DF71 /* Build configuration list for PBXNativeTarget "Numwix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F3216DAE29D221680041DF71 /* Debug */,

@@ -155,7 +155,7 @@ class HomeViewController: UIViewController {
     // Add title label
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Numwiz"
+        label.text = "Numwix"
         label.font = UIFont(name: "Futura-bold", size: 50)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
