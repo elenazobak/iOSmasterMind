@@ -1,6 +1,6 @@
 # NumWix
 
-![Logo](/Assets.xcassets/Screenshot2.png)
+![Logo](./Assets.xcassets/Screenshot-2.imageset/Screenshot-2.png)
 
 
 
