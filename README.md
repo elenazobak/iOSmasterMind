@@ -1,6 +1,6 @@
 # NumWix
 
-![Logo](/myAssets/Screenshot2.png)
+![Logo](https://github.com/elenazobak/masterMindGame/blob/main/assets/_logo.png?raw=true)
 
 
 
@@ -10,7 +10,7 @@ Mastermind is a game where a player tries to guess a randomly generated code. At
 
 ### Built with
 
-- [Swift](https://reactnative.dev/)
+- [Swift](https://www.swift.org/)
 
 
 # Contact
