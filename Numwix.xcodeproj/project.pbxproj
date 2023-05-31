@@ -19,6 +19,7 @@
 		F3216DB729D352260041DF71 /* CodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DB629D352260041DF71 /* CodeManager.swift */; };
 		F3216DC029D62C200041DF71 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DBF29D62C200041DF71 /* GameLogic.swift */; };
 		F3216DC229D72A340041DF71 /* InputHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3216DC129D72A340041DF71 /* InputHistoryModel.swift */; };
+		F36C1D392A27C8F80005D080 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F36C1D382A27C8F80005D080 /* README.md */; };
 		F379D0A929F1DF6300DA1374 /* CluePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F379D0A829F1DF6300DA1374 /* CluePopUp.swift */; };
 		F399689B29DCB46000FA4DA7 /* AlertPopUpLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F399689729DC931600FA4DA7 /* AlertPopUpLayer.swift */; };
 		F399689D29E031D400FA4DA7 /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F399689C29E031D400FA4DA7 /* GameSettings.swift */; };
@@ -30,7 +31,7 @@
 		281A18AA442CBB7943E5C473 /* Pods-masterMind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-masterMind.debug.xcconfig"; path = "Target Support Files/Pods-masterMind/Pods-masterMind.debug.xcconfig"; sourceTree = "<group>"; };
 		8547D5C6D9D985D53C48D37C /* Pods_masterMind.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_masterMind.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4F1D37ACCB7C00E68C4CDD /* Pods-masterMind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-masterMind.release.xcconfig"; path = "Target Support Files/Pods-masterMind/Pods-masterMind.release.xcconfig"; sourceTree = "<group>"; };
-		F3216D9629D221670041DF71 /* Numwix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Numwix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3216D9629D221670041DF71 /* masterMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = masterMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3216D9929D221670041DF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3216D9B29D221670041DF71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F3216D9D29D221670041DF71 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +44,7 @@
 		F3216DB629D352260041DF71 /* CodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeManager.swift; sourceTree = "<group>"; };
 		F3216DBF29D62C200041DF71 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		F3216DC129D72A340041DF71 /* InputHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputHistoryModel.swift; sourceTree = "<group>"; };
+		F36C1D382A27C8F80005D080 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F379D0A829F1DF6300DA1374 /* CluePopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluePopUp.swift; sourceTree = "<group>"; };
 		F399689729DC931600FA4DA7 /* AlertPopUpLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPopUpLayer.swift; sourceTree = "<group>"; };
 		F399689C29E031D400FA4DA7 /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
@@ -92,7 +94,7 @@
 		F3216D9729D221670041DF71 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3216D9629D221670041DF71 /* Numwix.app */,
+				F3216D9629D221670041DF71 /* masterMind.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +109,7 @@
 				F3216D9B29D221670041DF71 /* SceneDelegate.swift */,
 				F399689629DC92DA00FA4DA7 /* AlertPopUp */,
 				F3216DA529D221680041DF71 /* Assets.xcassets */,
+				F36C1D382A27C8F80005D080 /* README.md */,
 				F3216DA729D221680041DF71 /* LaunchScreen.storyboard */,
 				F3216DAA29D221680041DF71 /* Info.plist */,
 				F3216DA229D221670041DF71 /* masterMind.xcdatamodeld */,
@@ -156,23 +159,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F3216D9529D221670041DF71 /* Numwix */ = {
+		F3216D9529D221670041DF71 /* masterMind */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3216DAD29D221680041DF71 /* Build configuration list for PBXNativeTarget "Numwix" */;
+			buildConfigurationList = F3216DAD29D221680041DF71 /* Build configuration list for PBXNativeTarget "masterMind" */;
 			buildPhases = (
 				E2D5445FBB0508974D94F240 /* [CP] Check Pods Manifest.lock */,
 				F3216D9229D221670041DF71 /* Sources */,
 				F3216D9329D221670041DF71 /* Frameworks */,
 				F3216D9429D221670041DF71 /* Resources */,
-				4BBCBB0651EDE691B23FC165 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Numwix;
+			name = masterMind;
 			productName = masterMind;
-			productReference = F3216D9629D221670041DF71 /* Numwix.app */;
+			productReference = F3216D9629D221670041DF71 /* masterMind.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -203,7 +205,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F3216D9529D221670041DF71 /* Numwix */,
+				F3216D9529D221670041DF71 /* masterMind */,
 			);
 		};
 /* End PBXProject section */
@@ -215,6 +217,7 @@
 			files = (
 				F3F4215229DB627F0000C8E3 /* HistoryTableViewCell1.xib in Resources */,
 				F3216DA929D221680041DF71 /* LaunchScreen.storyboard in Resources */,
+				F36C1D392A27C8F80005D080 /* README.md in Resources */,
 				F3216DA629D221680041DF71 /* Assets.xcassets in Resources */,
 				F3216DA129D221670041DF71 /* Main.storyboard in Resources */,
 			);
@@ -223,23 +226,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4BBCBB0651EDE691B23FC165 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-masterMind/Pods-masterMind-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-masterMind/Pods-masterMind-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-masterMind/Pods-masterMind-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E2D5445FBB0508974D94F240 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -431,12 +417,15 @@
 				DEVELOPMENT_TEAM = V99NF3PFRH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = masterMind/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Numwix;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,12 +450,15 @@
 				DEVELOPMENT_TEAM = V99NF3PFRH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = masterMind/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Numwix;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,7 +484,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3216DAD29D221680041DF71 /* Build configuration list for PBXNativeTarget "Numwix" */ = {
+		F3216DAD29D221680041DF71 /* Build configuration list for PBXNativeTarget "masterMind" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F3216DAE29D221680041DF71 /* Debug */,

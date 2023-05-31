@@ -1,0 +1,22 @@
+# NumWix
+
+![Logo](/myAssets/Screenshot2.png)
+
+
+
+# Introduction
+
+Mastermind is a game where a player tries to guess a randomly generated code. At the end of each attempt to guess the code, the computer provides feedback on whether the player has guessed the code correctly, the number of correct digits, and/or correct positions. A player must guess the right code within a preconfigured number of attempts to win the game.
+
+### Built with
+
+- [Swift](https://reactnative.dev/)
+
+
+# Contact
+
+Elena Zobak - [GitHub](https://github.com/elenazobak) | [LinkedIn](https://www.linkedin.com/in/elenazobak/)
+
+App Store: https://apps.apple.com/us/app/numwix/id6448761871
+
+

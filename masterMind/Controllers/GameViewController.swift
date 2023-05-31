@@ -5,7 +5,7 @@
 //  Created by Elena Zobak on 3/28/23.
 //
 import UIKit
-import OTPFieldView
+
 //import AlertPopUp
 protocol AlertPopUpDelegate: AnyObject {
     func goToHome()
