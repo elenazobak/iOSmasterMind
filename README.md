@@ -1,6 +1,6 @@
 # NumWix
 
-![Logo](/Users/elena/IOS/masterMind/myAssets/Screenshot2.png)
+![Logo](/Screenshot2.png)
 
 
 
