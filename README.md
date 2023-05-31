@@ -6,7 +6,9 @@
 
 # Introduction
 
-Mastermind is a game where a player tries to guess a randomly generated code. At the end of each attempt to guess the code, the computer provides feedback on whether the player has guessed the code correctly, the number of correct digits, and/or correct positions. A player must guess the right code within a preconfigured number of attempts to win the game.
+"NumWix" is a fun and challenging guessing game app that tests your deduction skills. The game generates a secret code consisting of a series of numbers, and your objective is to guess the code within a limited number of attempts. After each guess, the app provides feedback on which numbers are correct and in the correct position, and which numbers are correct but in the wrong position.
+
+The app features customizable settings, including the length of the code and the number of attempts allowed. You can also view your past attempts and their results in the game history.
 
 ### Built with
 
