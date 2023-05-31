@@ -84,6 +84,7 @@
 		F3216D8D29D221660041DF71 = {
 			isa = PBXGroup;
 			children = (
+				F36C1D382A27C8F80005D080 /* README.md */,
 				F3216D9829D221670041DF71 /* masterMind */,
 				F3216D9729D221670041DF71 /* Products */,
 				D2416655441315BCED8B877D /* Pods */,
@@ -109,7 +110,6 @@
 				F3216D9B29D221670041DF71 /* SceneDelegate.swift */,
 				F399689629DC92DA00FA4DA7 /* AlertPopUp */,
 				F3216DA529D221680041DF71 /* Assets.xcassets */,
-				F36C1D382A27C8F80005D080 /* README.md */,
 				F3216DA729D221680041DF71 /* LaunchScreen.storyboard */,
 				F3216DAA29D221680041DF71 /* Info.plist */,
 				F3216DA229D221670041DF71 /* masterMind.xcdatamodeld */,
