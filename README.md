@@ -1,6 +1,6 @@
 # NumWix
 
-![Logo](https://github.com/elenazobak/masterMindGame/blob/main/assets/_logo.png?raw=true)
+![Logo](/Users/elena/IOS/masterMind/myAssets/Screenshot2.png)
 
 
 
